@@ -1,0 +1,163 @@
+body{
+    background: linear-gradient(90deg, #001f3f, #003366, #004080);
+}
+.grid{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 40%);
+    background-clip: border-box;
+    margin-left: 30rem;
+    margin-top: 5rem;
+}
+.grid div{
+    height: 20px;
+    width: 20px;
+}
+.invaders {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff3333 50%, #cc0000 70%);
+    border-radius: 3px; /* Slight rounding for pixelated look */
+    box-shadow: 0 0 4px rgba(255, 0, 0, 0.8);
+}
+
+.invaders::before, .invaders::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #ff3333 50%, #cc0000 70%);
+    border-radius: 50%;
+}
+
+.invaders::before {
+    top: 2px;
+    left: 2px;
+}
+
+.invaders::after {
+    bottom: 2px;
+    right: 2px;
+}
+.shooter {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.9) 50%, rgba(0, 255, 255, 0) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+    transition: all 0.3s ease;
+}
+
+.shooter:hover {
+    background: radial-gradient(circle, rgba(0, 255, 255, 1) 50%, rgba(0, 255, 255, 0) 70%);
+    box-shadow: 0 0 12px rgba(0, 255, 255, 1);
+}
+
+.laser {
+    position: relative;
+    width: 20px; 
+    height: 4px; 
+    background: linear-gradient(to bottom, #00ff99, #009966);
+    border-radius: 2px; 
+    box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(0, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(0, 255, 255, 0.8);
+    }
+}
+.boom {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff0000 0%, transparent 60%);
+    border-radius: 50%;
+    opacity: 1;
+    pointer-events: none;
+    animation: explode 0.5s ease-out forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+.str-btn{
+    margin-left: 34rem;
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #00ff99;
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+.str-btn:hover {
+    background-color: #00cc99;
+    border-color: #00cc99;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+}
+.result{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff99;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 20px auto; 
+    width: 90%;
+    max-width: 600px; 
+}
+.score{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff99;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin: 20px auto; 
+    width: 90%; 
+    max-width: 600px; 
+}
+.hidden{
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ff99;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border: 2px solid #00ff99;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+    margin: 20px auto; 
+    width: 90%; 
+    max-width: 600px;
+}
