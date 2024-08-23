@@ -25,7 +25,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone <>
+git clone <https://github.com/mohitpatwari/memory-game.git>
 
 Open the Game:
 
